@@ -1,0 +1,4 @@
+Sample	Mapped (with MQ>0)
+Sample_01_stats	1953846.0
+Sample_02_stats	1954015.0
+Sample_03_stats	1953104.0

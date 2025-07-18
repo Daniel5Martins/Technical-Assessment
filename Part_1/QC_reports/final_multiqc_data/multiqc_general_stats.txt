@@ -1,0 +1,16 @@
+Sample	picard_mark_duplicates-PERCENT_DUPLICATION	samtools_stats-error_rate	samtools_stats-non_primary_alignments	samtools_stats-reads_mapped	samtools_stats-reads_mapped_percent	samtools_stats-reads_properly_paired_percent	samtools_stats-reads_MQ0_percent	samtools_stats-raw_total_sequences	samtools_stats-insert_size_average	samtools_flagstat-flagstat_total	samtools_flagstat-mapped_passed	samtools_flagstat-mapped_passed_pct	fastp-pct_duplication	fastp-after_filtering_q30_rate	fastp-after_filtering_q30_bases	fastp-filtering_result_passed_filter_reads	fastp-after_filtering_gc_content	fastp-pct_surviving	fastp-pct_adapter	fastqc-percent_duplicates	fastqc-percent_gc	fastqc-avg_sequence_length	fastqc-median_sequence_length	fastqc-percent_fails	fastqc-total_sequences
+Sample_01_R1													0.5055	96.4667	279.329371	1.970148	46.8628	98.5074	15.16245	9.087490057206026	46.0	147.38659582934886	150	0.0	0.985074
+Sample_01_R2																				9.314066068427422	46.0	147.38981284654756	150	0.0	0.985074
+Sample_01_flagstat										1.954718	1.954718	100.0													
+Sample_01_sorted	1.073																								
+Sample_01_stats		0.3784304	0.0	1.953846	100.0	99.554366106643	0.0	1.953846	210.8																
+Sample_02_R1													0.5438000000000001	96.4318	277.98128099999997	1.96987	46.9593	98.4935	17.176949999999998	8.998700966815605	46.0	146.7397452623777	150	0.0	0.984935
+Sample_02_R2																				9.187882277322373	46.0	146.74327950575417	150	0.0	0.984935
+Sample_02_flagstat										1.9549509999999999	1.9549509999999999	100.0													
+Sample_02_sorted	1.1559																								
+Sample_02_stats		0.3745265	0.0	1.9540149999999998	100.0	99.53024925601902	0.0	1.9540149999999998	208.4																
+Sample_03_R1													0.479	96.43	279.193679	1.97088	46.9258	98.544	15.626599999999998	8.980268670050336	46.0	147.3139024192239	150	0.0	0.98544
+Sample_03_R2																				9.022038968117315	46.0	147.3160887522325	150	0.0	0.98544
+Sample_03_flagstat										1.953868	1.953868	100.0													
+Sample_03_sorted	1.0619																								
+Sample_03_stats		0.3834014	0.0	1.953104	100.0	99.52107005054518	0.0	1.953104	208.6																

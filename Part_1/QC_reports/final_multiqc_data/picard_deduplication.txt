@@ -1,0 +1,4 @@
+Sample	Unique Pairs	Unique Unpaired	Duplicate Pairs Optical	Duplicate Pairs Nonoptical	Duplicate Unpaired
+Sample_01_sorted	1932726.0	156.0	582.0	20320.0	62.0
+Sample_02_sorted	1931308.0	120.0	710.0	21808.0	68.0
+Sample_03_sorted	1932234.0	130.0	494.0	20190.0	56.0

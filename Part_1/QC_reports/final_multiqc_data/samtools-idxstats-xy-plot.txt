@@ -1,0 +1,4 @@
+Sample	Chromosome X	Chromosome Y
+Sample_01_idxstats	30733.0	18.0
+Sample_02_idxstats	15802.0	531.0
+Sample_03_idxstats	30389.0	16.0
