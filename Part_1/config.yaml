@@ -1,0 +1,31 @@
+# Input samples directory
+fastq_dir: "fastq/"
+
+# Ensembl information for ref_file download
+ensembl:
+  release: 114
+  species: homo_sapiens
+  assembly: GRCh38
+  fasta_file: "Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz"
+
+# Reference file directory
+ref_dir: "reference/"
+ref_file: "reference/genome.fa"
+
+# Output directories
+log_dir: "logs/"
+qc_dir: "results/QC/"
+bam_dir: "results/BAM/"
+
+# Adjustable thread usage
+threads:
+  fastqc: 4
+  fastp: 4
+  bwa: 4
+  samtools: 4
+  picard: 4
+
+# Otions dictionary for the different tools
+tool_options:
+  fastp_opts: "--detect_adapter_for_pe --trim_poly_g -q 20 -l 30"
+  picard_opts: "REMOVE_DUPLICATES=false VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true"
