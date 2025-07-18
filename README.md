@@ -1,4 +1,4 @@
-# Technical Assessment on Bioinformatics & Machine Learning7
+# Technical Assessment on Bioinformatics & Machine Learning
 
 Public repository for consideration by the Firalis S.A. & Amoneta Diagnostics Portuguese branch recruitment team.
 
