@@ -6,4 +6,4 @@ Public repository for consideration by the Firalis S.A. & Amoneta Diagnostics Po
 
 **Part 2** is a Machine Learning Mini-Project that builds a simple classification model to predict diagnostic status using a pre-processed Alzheimer's disease dataset.
 
-Note: Input data is not included in this public repository.
+Note: Input data and intermediary files (e.g BAM files) are not included in this public repository.
