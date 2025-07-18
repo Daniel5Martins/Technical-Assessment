@@ -135,7 +135,7 @@ def rf_grid_search(rf_model, X_train, y_train, seed, scoring='balanced_accuracy'
 
     return search
 
-def permut_imp(model, X_test, y_test, scoring_metrics = ['balanced_accuracy', 'roc_auc_ovr_weighted', 'f1_weighted', 'recall_weighted'], seed = 777, model_name = 'rf'):
+def permut_imp(model, X_test, y_test, scoring_metrics = ['balanced_accuracy', 'roc_auc_ovr_weighted', 'f1_weighted', 'recall_weighted'], seed = 777, model_name = 'initial_rf'):
     # Permutation importance
     print("\nCalculating permutation importance...")
     perm_importance = permutation_importance(model, X_test, y_test, n_repeats=30, random_state=seed, scoring=scoring_metrics)
@@ -150,7 +150,7 @@ def permut_imp(model, X_test, y_test, scoring_metrics = ['balanced_accuracy', 'r
         # Plot importance
         plt.figure(figsize=(10,6))
         plt.barh(X_test.columns[sorted_idx], perm_importance[s].importances_mean[sorted_idx])
-        plt.xlabel(f"Mean decrease in {s}")
+        plt.xlabel(f"Importance in {s} for {model_name}")
         plt.title("Permutation Feature Importance")
         plt.gca().invert_yaxis()
         plt.savefig(f'images/perm_imp/{model_name}_perm_imp_{s}.png', dpi=300)
@@ -167,11 +167,13 @@ def shap_plots(shap_values, X_test, classes, plot_list):
     for class_idx, class_name in enumerate(classes):
         if 'bar' in plot_list or 'all' in plot_list:
             shap.summary_plot(shap_values[:, :, class_idx], X_test, show=False, plot_type="bar", class_names=[class_name])
+            plt.xlabel(f"Mean (|SHAP value|) for the {class_name} class.")
             plt.savefig(f"images/shap/shap_bar_summary_{class_name}.png", dpi=300)
             plt.close()
 
         if 'bee' in plot_list or 'all' in plot_list:
             shap.summary_plot(shap_values[:, :, class_idx], X_test, show=False, class_names=[class_name])
+            plt.xlabel(f"SHAP values distribution for the {class_name} class.")
             plt.savefig(f"images/shap/shap_beeswarm_summary_{class_name}.png", dpi=300)
             plt.close()
 
@@ -182,8 +184,9 @@ def shap_plots(shap_values, X_test, classes, plot_list):
             shap.dependence_plot(
                 feature, 
                 shap_values[:, :, 0], 
-                X_test, 
+                X_test,
                 show=False
             )
+            plt.ylabel(f"SHAP for {feature}")
             plt.savefig(f"images/shap/shap_AD_feat_dependence_{feature}.png", dpi=300)
             plt.close()
